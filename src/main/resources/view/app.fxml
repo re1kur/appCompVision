@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.appController">
+   <AnchorPane fx:id="imagePane" layoutX="26.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity"
+               minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="645.0"
+               style="-fx-border-color: white; -fx-border-width: 5;">
+      <ImageView fx:id="imageView" fitHeight="480.0" fitWidth="640.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true"
+                 preserveRatio="true"/>
+   </AnchorPane>
+   <AnchorPane fx:id="btnVbox" layoutX="729.0" layoutY="25.0" prefHeight="550.0" prefWidth="250.0"
+               style="-fx-border-color: gray; -fx-border-width: 3;">
+      <VBox alignment="TOP_CENTER" layoutX="5.0" layoutY="6.0" prefHeight="540.0" prefWidth="250.0" spacing="5.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT"/>
+         </cursor>
+         <Button fx:id="loadImgBtn" focusTraversable="false" minHeight="-Infinity" mnemonicParsing="false"
+                 prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: white;" text="LOAD THE IMAGE"
+                 textFill="#313335">
+            <cursor>
+               <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+               <Font name="Cambria Bold" size="15.0"/>
+            </font>
+         </Button>
+         <Button fx:id="takeImgBtn" focusTraversable="false" minHeight="-Infinity" mnemonicParsing="false"
+                 prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: white;" text="TAKE A PICTURE"
+                 textFill="#313335">
+            <cursor>
+               <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+               <Font name="Cambria Bold" size="15.0"/>
+            </font>
+         </Button>
+         <Button fx:id="applyChannelBtn" focusTraversable="false" minHeight="-Infinity" mnemonicParsing="false"
+                 prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: white;" text="APPLY CHANNEL"
+                 textFill="#313335">
+            <cursor>
+               <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+               <Font name="Cambria Bold" size="15.0"/>
+            </font>
+         </Button>
+         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                     prefHeight="205.0" prefWidth="240.0"
+                     style="-fx-background-color: white; -fx-background-radius: 5;">
+            <CheckBox fx:id="blueChannel" alignment="CENTER" focusTraversable="false" layoutX="20.0"
+                      layoutY="141.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0"
+                      text="BLUE CHANNEL">
+               <font>
+                  <Font name="Cambria Bold Italic" size="13.0"/>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND"/>
+               </cursor>
+            </CheckBox>
+            <CheckBox fx:id="greenChannel" alignment="CENTER" focusTraversable="false" layoutX="20.0"
+                      layoutY="77.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0"
+                      text="GREEN CHANNEL">
+               <font>
+                  <Font name="Cambria Bold Italic" size="13.0"/>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND"/>
+               </cursor>
+            </CheckBox>
+            <CheckBox fx:id="redChannel" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false"
+                      layoutX="20.0" layoutY="14.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0"
+                      selected="true" text="RED CHANNEL">
+               <font>
+                  <Font name="Cambria Bold Italic" size="13.0"/>
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND"/>
+               </cursor>
+            </CheckBox>
+         </AnchorPane>
+         <Button fx:id="cropImageBtn" focusTraversable="false" minHeight="-Infinity" mnemonicParsing="false"
+                 prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: white;" text="CROP THE IMAGE"
+                 textFill="#313335">
+            <cursor>
+               <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+               <Font name="Cambria Bold" size="15.0"/>
+            </font>
+         </Button>
+         <Button fx:id="rotateImageBtn" focusTraversable="false" minHeight="-Infinity" mnemonicParsing="false"
+                 prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: white;" text="ROTATE THE IMAGE"
+                 textFill="#313335">
+            <cursor>
+               <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+               <Font name="Cambria Bold" size="15.0"/>
+            </font>
+         </Button>
+         <Button fx:id="drawTheQuadrangleBtn" focusTraversable="false" minHeight="-Infinity"
+                 mnemonicParsing="false" prefHeight="50.0" prefWidth="240.0" style="-fx-background-color: white;"
+                 text="DRAW THE QUADRANGLE" textFill="#313335">
+            <cursor>
+               <Cursor fx:constant="HAND"/>
+            </cursor>
+            <font>
+               <Font name="Cambria Bold" size="15.0"/>
+            </font>
+         </Button>
+      </VBox>
+   </AnchorPane>
+   <Button fx:id="takeFrameBtn" focusTraversable="false" layoutX="274.0" layoutY="556.0" mnemonicParsing="false"
+           style="-fx-background-radius: 20; -fx-background-color: white;" text="TAKE THIS FRAME" visible="false">
+      <font>
+         <Font name="Cambria Bold" size="15.0"/>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+   </Button>
+   <Button fx:id="saveImageBtn" focusTraversable="false" layoutX="607.0" layoutY="556.0" mnemonicParsing="false"
+           style="-fx-background-color: WHITE;" text="SAVE IN">
+      <font>
+         <Font name="Cambria Bold Italic" size="13.0"/>
+      </font>
+      <cursor>
+         <Cursor fx:constant="HAND"/>
+      </cursor>
+   </Button>
+</AnchorPane>
