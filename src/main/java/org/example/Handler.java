@@ -359,4 +359,20 @@ public class Handler {
     public static String changePngToJpg(String filePath) {
         return filePath.replaceFirst("[.][^.]+$", "") + ".jpg";
     }
+    public static void createDirectory() {
+        String dirpath = "src\\main\\resources\\chosen_images";
+        // Создаем объект File с указанным путем
+        File directory = new File(dirpath);
+        // Проверяем, существует ли уже эта папка
+        if (!directory.exists()) {
+            // Если не существует, создаем папку
+            if (directory.mkdirs()) {
+                System.out.println("Directory created successfully: " + dirpath);
+            } else {
+                System.out.println("Failed to create directory: " + dirpath);
+            }
+        } else {
+            System.out.println("Directory already exists: " + dirpath);
+        }
+    }
 }
